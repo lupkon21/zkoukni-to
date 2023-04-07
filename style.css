@@ -6,18 +6,21 @@
 body {
     background-color: #222831;
     font-family: 'Indie Flower', cursive;
-    color: #ECECEC;
+    color: #ececec;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*animace*/
 
-@keyframes prechod{
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+@keyframes prechod {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 ::selection {
@@ -28,35 +31,29 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-} 
-
+}
 
 /*navigační menu*/
+nav {
+    width: 100%;
+    background-color: #30475e;
+}
 
 nav ul {
-    background-color: #30475E;
     overflow: hidden;
     list-style-type: none;
+    margin: auto;
+    width: fit-content;
 }
 
 nav li {
-    float: left; 
-    margin-left: 171.5px;
-    padding: 20px 0; 
-}
-
-nav .kategorie {
-    margin-left: 80px;
-}
-
-nav #onas {
-    float: right;
-    margin-right: 171.5px;
+    float: left;
+    padding: 20px 30px;
 }
 
 nav a {
     text-decoration: none;
-    color: #ECECEC;
+    color: #ececec;
     font-size: 20px;
 }
 
@@ -64,76 +61,81 @@ nav a:hover {
     color: #f2a365;
 }
 
-
 /*index*/
+.index {
+    width: 50%;
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
 .index h1 {
-    margin-top: 300px;
-    float: left;
-    margin-left: 171.5px;    
     font-weight: normal;
     text-align: center;
+    margin-top: 2%;
     font-size: 30px;
     animation: prechod 4s;
 }
 
 .index p {
     margin-top: 20px;
-    float: left;
-    margin-left: 171.5px;    
     font-weight: normal;
-    text-align: justify;
-    font-size: 18px;   
+    text-align: center;
+    font-size: 18px;
     animation: prechod 4s;
-
+    margin-bottom: 40px;
 }
 
 .index img {
-    float: right;
-    width: 35%;
-    margin-right: 171.5px;
-    margin-top: 35px; 
+    display: block;
+    margin: auto;
+    width: 300px;
     animation: prechod 2s;
 }
 
 /*styly na stránku "o nás"*/
+.onas {
+    width: 50%;
+    margin: 40px auto 0 auto;
+}
+
 #onas h1 {
     font-size: 30px;
     text-align: center;
-    margin: 40px 0 10px 0;
-    color: #f2a365;    
+    margin: 0 0 10px 0;
+    color: #f2a365;
     font-weight: 600;
     text-decoration: underline;
 }
 
 #onas p {
     text-align: justify;
-    width: 859px;
-    margin: auto;
 }
 
-
 /*galerie*/
+.rada {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
 .rada article img {
     width: 191px;
     height: 255px;
-    margin-left: 36px; 
+    margin-left: 36px;
     margin-top: 40px;
     float: left;
-    border: solid 2px transparent; 
+    border: solid 2px transparent;
 }
 
 .rada article img:hover {
     border-color: #f2a365;
-    
 }
 
-.rada {
-    display: flex;
-    justify-content: center;
-    margin-left: -36px;
-}
-
-.popis1  a{
+.popis1 a {
     margin-left: 40px;
     font-size: 18px;
     font-weight: bolder;
@@ -143,31 +145,27 @@ nav a:hover {
 
 .popis2 {
     margin-left: 40px;
-    font-size: 11px; 
+    font-size: 11px;
 }
-
 
 /*oranžový text*/
 .oranzovy {
-    color: #f2a365;  
+    color: #f2a365;
 }
 
-.oranzovy a{
+.oranzovy a {
     color: #f2a365;
     text-decoration: none;
 }
 
-
 /*patička*/
-footer{
+footer {
+    margin-top: auto;
     text-align: center;
-    position: fixed;
-    bottom: 0;
     background-color: #30475e;
     width: 100%;
     padding: 13px 0;
 }
-
 
 /*styly na stránku zdroje*/
 .zdroje {
@@ -177,8 +175,8 @@ footer{
 
 .zdroje ul {
     margin-top: 10px;
-    display: inline-block; 
-	text-align: left;
+    display: inline-block;
+    text-align: left;
 }
 
 .zdroje h2 {
@@ -189,21 +187,20 @@ footer{
     margin-top: 5px;
 }
 
-
 /*styly na stránku se jednotlivými filmy/seriály*/
 .filmyserialy img {
-    width: 20%;
+    width: 300px;
     margin: 40px 171.5px;
     float: left;
     box-shadow: 8px 9px #191d24;
-    border-radius: 1%; 
+    border-radius: 1%;
 }
 
 .filmyserialy h1 {
     font-size: 30px;
     text-align: center;
     margin: 40px 0 5px 0;
-    color: #f2a365;    
+    color: #f2a365;
     font-weight: 600;
     text-decoration: underline;
 }
@@ -214,31 +211,49 @@ footer{
 }
 
 .filmyserialy ul li {
-    display: inline-block; 
+    display: inline-block;
     background-color: #30475e;
     padding: 5px;
-    border-radius: 15%;    
+    border-radius: 15%;
 }
 
 .filmyserialy ul {
-   text-align: right;
-   margin-bottom: 10px;
+    text-align: right;
+    margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 1400px) {
+    .filmyserialy {
+        width: 75%;
+        margin: auto;
+    }
+
+    .filmyserialy img {
+        display: block;
+        width: 300px;
+        margin: 40px auto 0 auto;
+        float: none;
+    }
+
+    .filmyserialy iframe {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
 
 /*video*/
 iframe {
     margin: 30px auto 0 auto;
     display: block;
-    width: 560px; 
+    width: 560px;
     height: 315px;
     border: 1px solid #f2a365;
+    margin-bottom: 40px;
 }
-
 
 /*procházení mezi filmy/seriály*/
 .predchozi {
-    background-color: #ECECEC;
+    background-color: #ececec;
     padding: 8px;
     position: absolute;
     top: 50%;
